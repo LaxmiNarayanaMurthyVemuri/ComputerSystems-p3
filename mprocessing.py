@@ -77,11 +77,11 @@ class HTTPServer:
                 data+="\n"
                 data+="<html><body><h1>Hehe Webserver under construction</h1></body></html>\n\n"
                 c.send(data.encode())
-                
+
         except:
-                    mess='HTTP/1.1 200 OK \n Content-Type:text/plain \n Content-Length:1024 \n Connection: close\n\n'
-                    mess+="<html><body><h1>Error 404 File Not found</h1></body></html>\n\n"
-                    c.send(mess.encode())
+            mess='HTTP/1.1 200 OK \n Content-Type:text/plain \n Content-Length:1024 \n Connection: close\n\n'
+            mess+="<html><body><h1>Error 404 File Not found</h1></body></html>\n\n"
+            c.send(mess.encode())
         
     
 def main():
